@@ -71,5 +71,7 @@ export const login = async (req, res, next) => {
       message: "Incorrect Credentials, Please try again",
     });
   }
-  return res.status(200).json({ success: false, message: "Login Successful" });
+  return res
+    .status(200)
+    .json({ success: true, message: "Login Successful", user: existingUser });
 };
