@@ -9,7 +9,7 @@ const Auth = () => {
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
-  const [isSignup, setIsSignup] = useState(true)
+  const [isSignup, setIsSignup] = useState(false)
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
@@ -29,7 +29,7 @@ const Auth = () => {
       password: inputs.password
     }).catch(err => console.log(err))
     const data = await res.data
-    // console.log(data)
+    console.log(data)
     return data 
   }
   const handleSubmit = (e) => {

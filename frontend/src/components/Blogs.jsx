@@ -9,7 +9,7 @@ const Blogs = () => {
     const res = await axios.get("http://localhost:8080/api/blog/").catch(error => console.log(error))
     const data = await res.data
     return data
-  }
+  } 
   useEffect(() => {
   sendRequest().then(data =>setBlogs(data.blog))
   }, [])
